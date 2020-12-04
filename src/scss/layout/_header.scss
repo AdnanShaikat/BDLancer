@@ -116,4 +116,26 @@
             }
         }
     }
+
+    .sidebar {
+        width: 100%;
+        position: fixed;
+        background: rgba($black, 0.5);
+        height: 100vh;
+        z-index: 100;
+        display: none;
+        &__container {
+            background: $white;
+            width: 250px;
+            height: 100vh;
+            right: 0;
+            position: absolute;
+            animation: sidebar-container 300ms ease-out;
+        }
+    }
+
+    .sidebar.show{
+        display: block;
+    }
 }
+
