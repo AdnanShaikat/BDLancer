@@ -118,24 +118,83 @@
     }
 
     .sidebar {
+        top: 60px;
         width: 100%;
         position: fixed;
         background: rgba($black, 0.5);
-        height: 100vh;
+        height: 0;
+        // display: none;
         z-index: 100;
-        display: none;
         &__container {
             background: $white;
             width: 250px;
             height: 100vh;
             right: 0;
             position: absolute;
-            animation: sidebar-container 300ms ease-out;
+            transform: translateX(100%);
+            transition: transform 300ms ease-out;
+            // animation: sidebar-container 300ms ease-out;
         }
+
+        &__links {
+            list-style: none;
+            width: 100%;
+        }
+
+        &__item {
+            width: 100%;
+            font-weight: 600;
+
+            >a {
+                width: 100%;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: $black;
+                display: flex;
+                align-items: center;
+
+                &:hover {
+                    background: $light;
+                    color: $primary;
+                }
+            }
+        }
+
+        &-dropdown {
+            width: 100%;
+            list-style: none;
+            display: none;
+            &__item {
+                width: 100%;
+
+                >a {
+                    width: 100%;
+                    padding: 10px 30px;
+                    text-decoration: none;
+                    color: $black;
+                    display: flex;
+                    align-items: center;
+    
+                    &:hover {
+                        background: $light;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+
+        .sidebar-dropdown.show{
+            display: block;
+        }
+        
+    }
+
+    .sidebar.show .sidebar__container {
+        transform: translateX(0);
     }
 
     .sidebar.show{
-        display: block;
+        height: 100vh;
     }
 }
 
