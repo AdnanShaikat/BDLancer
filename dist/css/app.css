@@ -16438,8 +16438,9 @@ body {
 }
 .header .sidebar__container {
   background: #fff;
-  width: 250px;
-  height: 100vh;
+  width: 300px;
+  height: calc(100vh - 60px);
+  overflow: auto;
   right: 0;
   position: absolute;
   transform: translateX(100%);
@@ -16468,7 +16469,9 @@ body {
 .header .sidebar-dropdown {
   width: 100%;
   list-style: none;
-  display: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in;
 }
 .header .sidebar-dropdown__item {
   width: 100%;
@@ -16486,7 +16489,7 @@ body {
   color: #1DBF73;
 }
 .header .sidebar .sidebar-dropdown.show {
-  display: block;
+  max-height: 500px;
 }
 .header .sidebar.show .sidebar__container {
   transform: translateX(0);
