@@ -1,5 +1,9 @@
 @charset "UTF-8";
 /* Colors: */
+.section-padding {
+  padding: 50px 0;
+}
+
 /*!
  * Bootstrap v4.5.3 (https://getbootstrap.com/)
  * Copyright 2011-2020 The Bootstrap Authors
@@ -16556,4 +16560,24 @@ body {
 }
 .rotate .bar3 {
   transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.section-header__line {
+  display: inline-block;
+  height: 2px;
+  width: 250px;
+  background: #1DBF73;
+}
+
+.category {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
+  gap: 1.5rem;
+}
+.category-card {
+  background: #fff;
+  border-top: 5px solid #1DBF73;
+}
+.category-card svg {
+  min-height: 80px;
 }

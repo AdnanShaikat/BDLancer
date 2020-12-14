@@ -1,0 +1,13 @@
+.category {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, auto));
+    gap: 1.5rem;
+
+    &-card {
+        background: $white;
+        border-top: 5px solid $primary;
+        svg {
+            min-height: 80px;
+        }
+    }
+}

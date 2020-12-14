@@ -1,5 +1,6 @@
 // abstracts
 @import "abstracts/variables";
+@import "abstracts/util.scss";
 
 // vendors
 @import "vendors/bootstrap";
@@ -16,6 +17,8 @@
 // components
 @import "components/search-box";
 @import "components/menu-bar";
+@import "components/section-header";
 
 
 // pages
+@import "pages/_home.scss";
