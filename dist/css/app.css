@@ -16578,6 +16578,38 @@ body {
   background: #fff;
   border-top: 5px solid #1DBF73;
 }
+.category-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
 .category-card svg {
   min-height: 80px;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, auto));
+  gap: 1.5rem;
+}
+.feature-card {
+  padding: 2rem 1rem;
+}
+.feature-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.feature-card__header {
+  display: flex;
+  align-items: center;
+}
+.feature-card__header svg {
+  height: 1.5rem;
+}
+.feature-card__header p {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.feature-card__body p {
+  text-align: justify;
 }
